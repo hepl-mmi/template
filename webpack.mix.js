@@ -1,8 +1,6 @@
-// webpack.mix.js
+const mix = require('laravel-mix');
 
-let mix = require('laravel-mix');
-
-mix.ts('src/js/Main.ts', 'js').sourceMaps()
+mix.ts('src/js/Main.ts', 'js/main.js').sourceMaps()
     .sass('src/scss/main.scss', 'css').sourceMaps()
     .setPublicPath('dist').setResourceRoot('../')
     .browserSync({
